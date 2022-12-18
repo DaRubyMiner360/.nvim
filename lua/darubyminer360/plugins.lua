@@ -4,8 +4,9 @@ Plug.begin('~/.config/nvim/plugged')
 Plug 'folke/tokyonight.nvim'
 Plug 'EdenEast/nightfox.nvim'
 
-Plug 'lewis6991/gitsigns.nvim'
+Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'feline-nvim/feline.nvim'
 -- Plug 'romgrk/barbar.nvim'
 
@@ -43,7 +44,10 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/playground'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
+
+Plug 'SmiteshP/nvim-gps'
 
 Plug.ends()
