@@ -4,6 +4,8 @@ Plug.begin('~/.config/nvim/plugged')
 Plug 'folke/tokyonight.nvim'
 Plug 'EdenEast/nightfox.nvim'
 
+Plug 'SmiteshP/nvim-gps'
+
 Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
@@ -48,6 +50,6 @@ Plug 'nvim-treesitter/playground'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 
-Plug 'SmiteshP/nvim-gps'
+Plug 'akinsho/toggleterm.nvim'
 
 Plug.ends()
