@@ -1,9 +1,10 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
+lsp.nvim_workspace()
 
---vim.opt.completeopt = 'preview'
+vim.keymap.set("n", "<leader>f", "<cmd>LspZeroFormat<cr>")
+
 local cmp = require('cmp')
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -17,14 +18,17 @@ cmp.setup({
     { name = 'luasnip' }
   }, {
     { name = 'buffer' }
-  })
+  }),
+  experimental = {
+    ghost_text = true
+  }
 })
 
 lsp.set_preferences({
-  sign_icons = { }
+  sign_icons = {}
 })
 
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
 lsp.setup_nvim_cmp({
   mapping = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -35,7 +39,7 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
+  local opts = { buffer = bufnr, remap = false }
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -58,3 +62,11 @@ vim.diagnostic.config({
   severity_sort = false,
   float = true
 })
+
+require("trouble").setup()
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>")
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>")
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
