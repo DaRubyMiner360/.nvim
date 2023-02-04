@@ -53,5 +53,8 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 
 Plug 'akinsho/toggleterm.nvim'
+Plug 'numToStr/Comment.nvim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 Plug.ends()
