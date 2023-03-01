@@ -38,9 +38,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 
--- Plug 'github/copilot.vim'
-Plug 'zbirenbaum/copilot.lua'
-Plug 'zbirenbaum/copilot-cmp'
+Plug 'github/copilot.vim'
 
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'

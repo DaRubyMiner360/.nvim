@@ -12,16 +12,15 @@ cmp.setup({
     end,
   },
   sources = cmp.config.sources({
-    { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'luasnip' }
   }, {
     { name = 'buffer' }
   }),
-  experimental = {
-    ghost_text = true
-  }
+  --experimental = {
+  --  ghost_text = true
+  --}
 })
 
 lsp.set_preferences({
@@ -34,7 +33,8 @@ lsp.setup_nvim_cmp({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-Space>'] = cmp.mapping.complete()
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<Tab>'] = vim.NIL
   })
 })
 
