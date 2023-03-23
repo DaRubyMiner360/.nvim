@@ -9,7 +9,7 @@ Plug 'SmiteshP/nvim-gps'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'feline-nvim/feline.nvim'
+Plug 'henrypotgieter/feline.nvim'
 -- Plug 'romgrk/barbar.nvim'
 
 Plug 'norcalli/nvim-terminal.lua'
