@@ -6,21 +6,57 @@ vim.keymap.set("n", "<leader>f", "<cmd>LspZeroFormat<cr>")
 
 local cmp = require('cmp')
 cmp.setup({
+  formatting = {
+    fields = {'abbr', 'kind', 'menu'},
+    format = require('lspkind').cmp_format({
+      mode = 'symbol', -- show only symbol annotations
+      maxwidth = 50, -- prevent the popup from showing more than provided characters
+      ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+      symbol_map = {
+        Copilot = "",
+        Text = "󰉿",
+        Method = "󰆧",
+        Function = "󰊕",
+        Constructor = "",
+        Field = "󰜢",
+        Variable = "󰀫",
+        Class = "󰠱",
+        Interface = "",
+        Module = "",
+        Property = "󰜢",
+        Unit = "󰑭",
+        Value = "󰎠",
+        Enum = "",
+        Keyword = "󰌋",
+        Snippet = "",
+        Color = "󰏘",
+        File = "󰈙",
+        Reference = "󰈇",
+        Folder = "󰉋",
+        EnumMember = "",
+        Constant = "󰏿",
+        Struct = "󰙅",
+        Event = "",
+        Operator = "󰆕",
+        TypeParameter = "",
+      },
+    })
+  },
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
     end,
   },
   sources = cmp.config.sources({
+    { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'path' },
-    { name = 'luasnip' }
-  }, {
-    { name = 'buffer' }
+    { name = 'luasnip' },
+    --{ name = 'buffer' }
   }),
-  --experimental = {
-  --  ghost_text = true
-  --}
+  experimental = {
+    ghost_text = true
+  }
 })
 
 lsp.set_preferences({
@@ -32,9 +68,16 @@ lsp.setup_nvim_cmp({
   mapping = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
+    ['<Tab>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<Tab>'] = vim.NIL
+    ['<C-Space>'] = cmp.mapping.complete()
   })
 })
 

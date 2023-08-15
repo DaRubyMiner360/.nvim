@@ -1,3 +1,7 @@
---vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
---vim.g.copilot_no_tab_map = true
---vim.g.copilot_assume_mapped = true
+require('copilot').setup({
+  suggestion = {enabled = false},
+  panel = {enabled = false},
+})
+require('copilot_cmp').setup()
+
+vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
