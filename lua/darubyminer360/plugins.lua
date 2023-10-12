@@ -3,6 +3,7 @@ local Plug = require('vimplug')
 Plug.begin('~/.config/nvim/plugged')
 Plug 'folke/tokyonight.nvim'
 Plug 'EdenEast/nightfox.nvim'
+Plug('catppuccin/nvim', {['as'] = 'catppuccin'})
 
 Plug 'SmiteshP/nvim-gps'
 
