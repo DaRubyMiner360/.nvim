@@ -2,15 +2,22 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 lsp.nvim_workspace()
 
-vim.keymap.set("n", "<leader>f", "<cmd>LspZeroFormat<cr>")
+vim.g.prettier_autoformat = 0
+vim.g.prettier_autoformat_require_pragma = 1
+
+vim.keymap.set("n", "<leader>f", function()
+  if vim.trim(vim.fn.execute("LspZeroFormat", true)) == "[LSP] Format request failed, no matching language servers." then
+    vim.cmd("Prettier")
+  end
+end)
 
 local cmp = require('cmp')
 cmp.setup({
   formatting = {
-    fields = {'abbr', 'kind', 'menu'},
+    fields = { 'abbr', 'kind', 'menu' },
     format = require('lspkind').cmp_format({
-      mode = 'symbol', -- show only symbol annotations
-      maxwidth = 50, -- prevent the popup from showing more than provided characters
+      mode = 'symbol',       -- show only symbol annotations
+      maxwidth = 50,         -- prevent the popup from showing more than provided characters
       ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
       symbol_map = {
         Copilot = "",

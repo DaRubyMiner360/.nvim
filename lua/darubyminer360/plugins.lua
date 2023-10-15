@@ -27,7 +27,7 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'mfussenegger/nvim-jdtls'
-Plug 'lukas-reineke/lsp-format.nvim'
+Plug('prettier/vim-prettier', {['run'] = 'yarn install --frozen-lockfile --production'})
 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
