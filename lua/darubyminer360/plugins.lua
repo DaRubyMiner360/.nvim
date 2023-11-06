@@ -24,10 +24,14 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'camgraff/telescope-tmux.nvim'
 Plug 'ThePrimeagen/harpoon'
 
+Plug 'mg979/vim-visual-multi'
+
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug('prettier/vim-prettier', {['run'] = 'yarn install --frozen-lockfile --production'})
+
+Plug('barrett-ruth/live-server.nvim', {['run'] = 'yarn global add live-server'})
 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -49,7 +53,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim'
 
 Plug 'elkowar/yuck.vim'
-Plug('eraserhd/parinfer-rust', {['run'] = 'cargo build --release'})
+--Plug('eraserhd/parinfer-rust', {['run'] = 'cargo build --release'})
 
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/playground'
@@ -60,5 +64,9 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kristijanhusak/vim-dadbod-completion'
 
 Plug.ends()

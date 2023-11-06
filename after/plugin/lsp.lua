@@ -57,6 +57,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'copilot' },
     { name = 'nvim_lsp' },
+    { name = 'vim-dadbod-completion' },
     { name = 'path' },
     { name = 'luasnip' },
     --{ name = 'buffer' }
