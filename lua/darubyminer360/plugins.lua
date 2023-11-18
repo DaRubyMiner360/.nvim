@@ -31,6 +31,8 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug('prettier/vim-prettier', {['run'] = 'yarn install --frozen-lockfile --production'})
 
+Plug 'lepture/vim-jinja'
+
 Plug('barrett-ruth/live-server.nvim', {['run'] = 'yarn global add live-server'})
 
 Plug 'williamboman/mason.nvim'
