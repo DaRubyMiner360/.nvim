@@ -17,12 +17,12 @@ Plug 'norcalli/nvim-terminal.lua'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-github.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'camgraff/telescope-tmux.nvim'
-Plug 'ThePrimeagen/harpoon'
 
 Plug 'mg979/vim-visual-multi'
 
@@ -32,6 +32,7 @@ Plug 'mfussenegger/nvim-jdtls'
 Plug('prettier/vim-prettier', {['run'] = 'yarn install --frozen-lockfile --production'})
 
 Plug 'lepture/vim-jinja'
+Plug 'OmniSharp/omnisharp-vim'
 
 Plug('barrett-ruth/live-server.nvim', {['run'] = 'yarn global add live-server'})
 
