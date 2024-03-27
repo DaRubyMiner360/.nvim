@@ -1,6 +1,5 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
-lsp.nvim_workspace()
 
 vim.g.prettier_autoformat = 0
 vim.g.prettier_autoformat_require_pragma = 1
@@ -11,7 +10,20 @@ vim.keymap.set("n", "<leader>f", function()
   end
 end)
 
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  handlers = {
+    lsp.default_setup,
+    lua_ls = function()
+      local lua_opts = lsp.nvim_lua_ls()
+      require('lspconfig').lua_ls.setup(lua_opts)
+    end,
+  }
+})
+
 local cmp = require('cmp')
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
 cmp.setup({
   formatting = {
     fields = { 'abbr', 'kind', 'menu' },
@@ -57,23 +69,13 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'copilot' },
     { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
     { name = 'vim-dadbod-completion' },
     { name = 'path' },
     { name = 'luasnip' },
     --{ name = 'buffer' }
   }),
-  experimental = {
-    ghost_text = true
-  }
-})
-
-lsp.set_preferences({
-  sign_icons = {}
-})
-
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-lsp.setup_nvim_cmp({
-  mapping = lsp.defaults.cmp_mappings({
+  mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<CR>'] = cmp.mapping.confirm({
@@ -86,7 +88,14 @@ lsp.setup_nvim_cmp({
     }),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete()
-  })
+  }),
+  experimental = {
+    ghost_text = true
+  }
+})
+
+lsp.set_preferences({
+  sign_icons = {}
 })
 
 lsp.on_attach(function(client, bufnr)
