@@ -125,7 +125,7 @@ vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>")
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
 
-vim.keymap.set("n", "<leader>f", function()
+vim.keymap.set("n", "<C-f>", function()
   if vim.trim(vim.fn.execute("LspZeroFormat", true)) == "[LSP] Format request failed, no matching language servers." then
     vim.cmd("Prettier")
   end
