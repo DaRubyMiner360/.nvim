@@ -7,7 +7,6 @@ Plug('catppuccin/nvim', {['as'] = 'catppuccin'})
 
 Plug 'SmiteshP/nvim-gps'
 
-Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'freddiehaddad/feline.nvim'
