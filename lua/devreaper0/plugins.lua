@@ -15,7 +15,7 @@ Plug 'norcalli/nvim-terminal.lua'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'ThePrimeagen/harpoon'
+Plug('ThePrimeagen/harpoon', {['branch'] = 'harpoon2'})
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-github.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
