@@ -3,7 +3,7 @@ local Plug = require('vimplug')
 Plug.begin('~/.config/nvim/plugged')
 Plug 'folke/tokyonight.nvim'
 Plug 'EdenEast/nightfox.nvim'
-Plug('catppuccin/nvim', {['as'] = 'catppuccin'})
+Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 
 Plug 'SmiteshP/nvim-gps'
 
@@ -15,7 +15,7 @@ Plug 'norcalli/nvim-terminal.lua'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/trouble.nvim'
-Plug('ThePrimeagen/harpoon', {['branch'] = 'harpoon2'})
+Plug('ThePrimeagen/harpoon', { ['branch'] = 'harpoon2' })
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-github.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
@@ -27,12 +27,12 @@ Plug 'mg979/vim-visual-multi'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'mfussenegger/nvim-jdtls'
-Plug('prettier/vim-prettier', {['run'] = 'yarn install --frozen-lockfile --production'})
+Plug('prettier/vim-prettier', { ['run'] = 'yarn install --frozen-lockfile --production' })
 
 Plug 'lepture/vim-jinja'
 Plug 'OmniSharp/omnisharp-vim'
 
-Plug('barrett-ruth/live-server.nvim', {['run'] = 'yarn global add live-server'})
+Plug('barrett-ruth/live-server.nvim', { ['run'] = 'yarn global add live-server' })
 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -69,5 +69,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'
+
+Plug 'wakatime/vim-wakatime'
 
 Plug.ends()
