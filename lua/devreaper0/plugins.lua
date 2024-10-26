@@ -53,6 +53,8 @@ Plug 'rafamadriz/friendly-snippets'
 
 Plug 'VonHeikemen/lsp-zero.nvim'
 
+Plug 'fatih/vim-go'
+
 Plug 'elkowar/yuck.vim'
 --Plug('eraserhd/parinfer-rust', {['run'] = 'cargo build --release'})
 
