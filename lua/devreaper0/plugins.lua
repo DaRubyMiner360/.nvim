@@ -63,6 +63,9 @@ Plug 'nvim-treesitter/playground'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 
+Plug 'kevinhwang91/promise-async'
+Plug 'kevinhwang91/nvim-ufo'
+
 Plug 'akinsho/toggleterm.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-repeat'

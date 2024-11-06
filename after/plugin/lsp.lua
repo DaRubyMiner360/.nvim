@@ -133,3 +133,5 @@ end)
 
 vim.g.prettier_autoformat = 0
 vim.g.prettier_autoformat_require_pragma = 1
+
+vim.g.go_fmt_autosave = 0
