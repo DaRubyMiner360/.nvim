@@ -58,8 +58,6 @@ Plug 'fatih/vim-go'
 Plug 'elkowar/yuck.vim'
 --Plug('eraserhd/parinfer-rust', {['run'] = 'cargo build --release'})
 
-Plug 'isobit/vim-caddyfile'
-
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/playground'
 Plug 'mbbill/undotree'
