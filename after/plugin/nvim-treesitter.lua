@@ -21,7 +21,6 @@ vim.api.nvim_create_autocmd('BufRead', {
       },
       filetype = "caddyfile",                                   -- if filetype does not match the parser name
     }
-    vim.cmd('TSUpdate')
   end,
 })
 
