@@ -1,7 +1,10 @@
-require('Comment').setup()
+require('Comment').setup({
+  pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+})
 local ft = require('Comment.ft')
 
-ft({'para', 'paracode'}, {'// %s', '/* %s */'})
+ft({ 'para', 'paracode' }, { '// %s', '/* %s */' })
+ft({ 'caddyfile' }, { '# %s' })
 
 vim.keymap.set("n", "<C-/>", "<Plug>(comment_toggle_linewise_current)<Down>")
 vim.keymap.set("n", "<C-?>", "<Plug>(comment_toggle_blockwise_current)<Down>")

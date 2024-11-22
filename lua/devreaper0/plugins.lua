@@ -68,6 +68,7 @@ Plug 'kevinhwang91/nvim-ufo'
 
 Plug 'akinsho/toggleterm.nvim'
 Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
