@@ -1,11 +1,12 @@
 require("catppuccin").setup({
   integrations = {
+    dadbod_ui = true,
     harpoon = true,
+    lsp_trouble = true,
     mason = true,
-    lsp_trouble = true
   }
 })
 
 vim.opt.signcolumn = 'yes'
 vim.opt.termguicolors = true
-pcall(vim.cmd, 'colorscheme catppuccin-mocha')
+vim.cmd('colorscheme catppuccin-mocha')
